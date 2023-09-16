@@ -39,4 +39,14 @@
 | Правило "contains_element" | Class "ContainsFromParts" | parent min 1 Item |
 | Правило "can_be_dissasembled_into" | Class "CanBeDisassembled" | (child some Item) and (canBeDisassembled value true) |
 | Правило "recipe_for_item" | Class "RecipeForItem" | (parent some Item) and (isRecipeItem value true) |
-|----------|----------|----------|
+
+### Примеры заготовленных объектов онтологии
+![alt text](images/instance1.png)
+![alt text](images/instance2.png)
+![alt text](images/instance3.png)
+![alt text](images/instance4.png)
+
+### Примеры выполнения DL запросов
+![alt text](images/query1.png)
+![alt text](images/query2.png)
+![alt text](images/query3.png)
