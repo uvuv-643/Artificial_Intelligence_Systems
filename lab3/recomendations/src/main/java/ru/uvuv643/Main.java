@@ -12,12 +12,13 @@ public class Main {
 
     public Kernel kernel = Kernel.getInstance();
 
-    public static void main(String[] args) throws OWLOntologyCreationException {
+    public static void main(String[] args) {
 
-        OWLOntologyManager owlManager =  OWLManager.createOWLOntologyManager();
-        File file = new File("ontology.rdf");
-        OWLOntology o = owlManager.loadOntologyFromOntologyDocument(file);
-        System.out.println(o);
+//        OWLOntologyManager owlManager =  OWLManager.createOWLOntologyManager();
+//        File file = new File("ontology.rdf");
+//        OWLOntology o = owlManager.loadOntologyFromOntologyDocument(file);
+//        System.out.println(o);
+        Kernel.getInstance().startInteractingViaConsole();
 
     }
 }

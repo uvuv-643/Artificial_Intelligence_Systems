@@ -10,13 +10,14 @@ public class ConsoleInputService implements InputService {
 
     public void greeting() {
         System.out.println("Привет!");
-        System.out.println("Расскажи, какие предметы у тебя есть, а мы скажем, что ты можешь с ними сделать");
-        System.out.println("Формат:");
+        System.out.println("Расскажи, какие предметы у тебя есть, а мы скажем, что ты можешь с ними сделать. Формат вот такой:");
         System.out.println("{предмет1}; {предмет2}; ...");
+        System.out.println("Печатай ниже:");
     }
 
     public RequestData input() {
-        return new RequestData(scanner.next());
+        this.greeting();
+        return new RequestData(scanner.nextLine().trim());
     }
 
 }

@@ -2,37 +2,43 @@ package ru.uvuv643.helpers;
 
 import ru.uvuv643.ontology.ItemData;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.stream.Collectors;
 
 public class OntologyHelper {
 
-    private static final ItemData[] allowedItems = new ItemData[]{
-            new ItemData("Helm_of_the_Overlord"),
-            new ItemData("Helm_of_the_Dominator"),
-            new ItemData("Vladmirs_Offering"),
-            new ItemData("Helm_of_Iron_Will"),
-            new ItemData("Diadem"),
-            new ItemData("Ring_of_Basilius"),
-            new ItemData("Sages_Mask"),
-            new ItemData("Buckler"),
-            new ItemData("Ring_of_Protection"),
-            new ItemData("Morbid_Mask"),
-            new ItemData("Blades_of_Attack"),
-            new ItemData("Mask_of_Madness"),
-            new ItemData("Quarterstaff"),
-            new ItemData("Tango"),
-            new ItemData("Bottle"),
-            new ItemData("Helm_of_the_Overlord_Recipe"),
-            new ItemData("Helm_of_the_Dominator_Recipe"),
-            new ItemData("Ring_of_Basilius_Recipe"),
-            new ItemData("Vladmirs_Offering_Recipe"),
-            new ItemData("Buckler_Recipe"),
+    private static final String[] allowedItems = new String[]{
+           "Helm_of_the_Overlord",
+           "Helm_of_the_Dominator",
+           "Vladmirs_Offering",
+           "Helm_of_Iron_Will",
+           "Diadem",
+           "Ring_of_Basilius",
+           "Sages_Mask",
+           "Buckler",
+           "Ring_of_Protection",
+           "Morbid_Mask",
+           "Blades_of_Attack",
+           "Mask_of_Madness",
+           "Quarterstaff",
+           "Tango",
+           "Bottle",
+           "Helm_of_the_Overlord_Recipe",
+           "Helm_of_the_Dominator_Recipe",
+           "Ring_of_Basilius_Recipe",
+           "Vladmirs_Offering_Recipe",
+           "Buckler_Recipe",
     };
 
-    public static Set<ItemData> getAllowedItems() {
-        return new HashSet<>(List.of(allowedItems));
+    public static ItemData getTheMostSimilarItem(String target) {
+        List<String> theMostSimilarList = List.of(allowedItems)
+            .stream()
+            .filter((String item) -> item.toLowerCase().equals(target.toLowerCase()))
+            .collect(Collectors.toList());
+        if (theMostSimilarList.isEmpty()) {
+            return null;
+        }
+        return new ItemData(theMostSimilarList.get(0));
     }
 
 }

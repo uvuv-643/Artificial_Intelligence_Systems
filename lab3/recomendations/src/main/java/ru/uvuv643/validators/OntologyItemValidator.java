@@ -8,10 +8,9 @@ import java.util.Set;
 
 public class OntologyItemValidator {
 
-    private static final Set<ItemData> allowedItems = OntologyHelper.getAllowedItems();
-
-    public void validate(ItemData itemData) throws ValidateException {
-        if (!allowedItems.contains(itemData)) {
+    public void validate(String name) throws ValidateException {
+        ItemData theMostSimilarInOntology = OntologyHelper.getTheMostSimilarItem(name);
+        if (theMostSimilarInOntology == null) {
             throw new ValidateException("Указан предмет, которого нет в онтологии.");
         }
     }
