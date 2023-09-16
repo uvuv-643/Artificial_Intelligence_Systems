@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota/"
+     xml:base="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dota="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#child -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#child">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#parent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#parent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#parent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#parent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#canBeDisassembled -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#canBeDisassembled">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#isMainItem -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#isMainItem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#isRecipeItem"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#isRecipeItem -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#isRecipeItem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#CanBeDisassembled -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#CanBeDisassembled">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#child"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#canBeDisassembled"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#ContainsFromParts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#ContainsFromParts">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#child"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#PartOfItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#PartOfItem">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#parent"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#RecipeForItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#RecipeForItem">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#parent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#isRecipeItem"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Blades_of_Attack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Blades_of_Attack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Vladmirs_Offering"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Bottle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Bottle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Buckler -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Buckler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Vladmirs_Offering"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Buckler_Recipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Buckler_Recipe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Buckler"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Diadem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Diadem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Dominator"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_Iron_Will -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_Iron_Will">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Dominator"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Dominator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Dominator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Overlord"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Dominator_Recipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Dominator_Recipe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Dominator"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Overlord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Overlord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Overlord_Recipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Overlord_Recipe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Overlord"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Mask_of_Madness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Mask_of_Madness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Morbid_Mask -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Morbid_Mask">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Mask_of_Madness"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Quarterstaff -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Quarterstaff">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Mask_of_Madness"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Ring_of_Basilius -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Ring_of_Basilius">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Vladmirs_Offering"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Ring_of_Basilius_Recipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Ring_of_Basilius_Recipe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Ring_of_Basilius"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Ring_of_Protection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Ring_of_Protection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Buckler"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Sages_Mask -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Sages_Mask">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Ring_of_Basilius"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Tango -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Tango">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Vladmirs_Offering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Vladmirs_Offering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Helm_of_the_Overlord"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isRecipeItem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Vladmirs_Offering_Recipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Vladmirs_Offering_Recipe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Item"/>
+        <dota:parent rdf:resource="http://www.semanticweb.org/r1505-we2-6-stud/ontologies/2023/8/dota#Vladmirs_Offering"/>
+        <dota:canBeDisassembled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:canBeDisassembled>
+        <dota:isMainItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</dota:isMainItem>
+        <dota:isRecipeItem rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</dota:isRecipeItem>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
