@@ -5,6 +5,7 @@ import ru.uvuv643.io.ConsoleInputService;
 import ru.uvuv643.io.RequestData;
 import ru.uvuv643.io.interfaces.InputService;
 import ru.uvuv643.ontology.ItemData;
+import ru.uvuv643.ontology.OntologyService;
 import ru.uvuv643.parsers.DescriptionParser;
 
 import java.util.List;
@@ -15,6 +16,7 @@ public class Kernel {
 
     private final DescriptionParser descriptionParser = new DescriptionParser();
     private final InputService inputService = new ConsoleInputService();
+    private final OntologyService ontologyService = new OntologyService();
 
 
     private Kernel() {}
@@ -31,6 +33,7 @@ public class Kernel {
         try {
             List<ItemData> itemDataList = descriptionParser.parse(requestData);
             System.out.println(itemDataList);
+            ontologyService.giveRecommendations(itemDataList);
         } catch (ParseException exception) {
             try {
                 System.err.println(exception.getMessage());

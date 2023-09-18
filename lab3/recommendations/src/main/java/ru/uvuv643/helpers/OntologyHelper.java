@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class OntologyHelper {
 
-    private static final String[] allowedItems = new String[]{
+    public static final String[] allowedItems = new String[]{
            "Helm_of_the_Overlord",
            "Helm_of_the_Dominator",
            "Vladmirs_Offering",
