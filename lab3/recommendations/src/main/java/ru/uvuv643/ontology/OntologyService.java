@@ -120,11 +120,8 @@ public class OntologyService {
                 Set<OWLNamedIndividual> targetChildren = getRelatedIndividuals(this.getIndividualByName(targetIndividual), "child");
                 Set<String> childrenNames = targetChildren.stream().map((OWLNamedIndividual item) -> item.getIRI().getShortForm()).collect(Collectors.toSet());
                 boolean canBeCreated = !targetChildren.isEmpty();
-                for (OWLNamedIndividual targetChild : targetChildren) {
-                    if (!childrenNames.contains(individual.getIRI().getShortForm())) {
-                        canBeCreated = false;
-                        break;
-                    }
+                if (!childrenNames.contains(individual.getIRI().getShortForm())) {
+                    break;
                 }
                 if (canBeCreated) {
                     canBeCreatedSet.add(targetIndividual);

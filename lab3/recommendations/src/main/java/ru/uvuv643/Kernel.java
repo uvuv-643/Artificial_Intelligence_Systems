@@ -1,6 +1,7 @@
 package ru.uvuv643;
 
 import ru.uvuv643.exceptions.ParseException;
+import ru.uvuv643.helpers.OntologyHelper;
 import ru.uvuv643.io.ConsoleInputService;
 import ru.uvuv643.io.RequestData;
 import ru.uvuv643.io.interfaces.InputService;
@@ -29,6 +30,10 @@ public class Kernel {
     }
 
     public void startInteractingViaConsole() {
+        for (String item : OntologyHelper.allowedItems) {
+            System.out.println(item);
+        }
+        System.out.println();
         RequestData requestData = inputService.input();
         try {
             List<ItemData> itemDataList = descriptionParser.parse(requestData);
